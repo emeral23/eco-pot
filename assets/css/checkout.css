@@ -1,0 +1,83 @@
+/* Container Utama */
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 10%;
+    background-color: #f4f7f4;
+}
+
+/* Bagian Kiri: Form */
+.checkout-form-section {
+    flex: 2;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Bagian Kanan: Ringkasan */
+.checkout-summary-section {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    border: 1px solid #e0e0e0;
+    position: sticky;
+    top: 20px;
+}
+
+/* Styling Form Input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* List Ringkasan Pesanan */
+.order-list {
+    list-style: none;
+    padding: 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+/* Tombol Pesan */
+.btn-order {
+    width: 100%;
+    background-color: #2D7A35;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-order:hover {
+    background-color: #1e5224;
+}

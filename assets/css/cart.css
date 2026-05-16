@@ -1,0 +1,78 @@
+/* Container Utama */
+.cart-container {
+    padding: 40px 10%;
+    min-height: 60vh;
+}
+
+.cart-title {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Tabel Keranjang */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.cart-table th {
+    background-color: #2D7A35;
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+.cart-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+/* Bagian Total */
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2D7A35;
+}
+
+/* Tombol Aksi */
+.cart-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-continue {
+    text-decoration: none;
+    color: #666;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-checkout {
+    text-decoration: none;
+    background-color: #2D7A35;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+    background-color: #1e5224;
+}

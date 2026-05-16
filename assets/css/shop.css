@@ -1,0 +1,59 @@
+/* Container Utama Katalog */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+}
+
+/* Card Produk */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Judul Produk */
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+/* Harga Produk */
+.product-price {
+    font-weight: bold;
+    color: #2D7A35;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Tombol Tambah ke Keranjang */
+.btn-add-cart {
+    background-color: #2D7A35;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn-add-cart:hover {
+    background-color: #1e5224;
+}

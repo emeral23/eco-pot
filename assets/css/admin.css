@@ -1,0 +1,745 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fc;
+}
+
+/* Wrapper Utama Full Screen */
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling - Fix di Kiri */
+.admin-sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e3e6f0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+}
+
+.profile-section {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f8f9fc;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4e73df;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+.profile-section h4 {
+    color: #5a5c69;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile-section p {
+    color: #b7b9cc;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Navigasi Sidebar */
+.side-nav {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav li {
+    margin: 5px 15px;
+}
+
+.side-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #858796;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.side-nav li.active a,
+.side-nav li a:hover {
+    background-color: #f8f9fc;
+    color: #4e73df;
+}
+
+.logout-nav {
+    margin-top: auto;
+    border-top: 1px solid #f8f9fc;
+}
+
+/* Area Konten Utama */
+.content-area {
+    width: 90%; /* Atau sesuaikan lebar yang lu mau */
+    max-width: 1200px; /* Biar di layar gede nggak terlalu lebar banget */
+    margin: 0 auto; /* Ini yang bikin dia otomatis ke tengah */
+    padding: 20px;
+    display: block; /* Pastiin bukan flex kalau cuma mau nengahin kontainer utama */
+}
+.top-header {
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+.search-bar input {
+    background-color: #f8f9fc;
+    border: 1px solid #d1d3e2;
+    border-radius: 6px;
+    padding: 10px 15px;
+    width: 300px;
+    font-size: 13px;
+}
+
+/* Bagian Body Dashboard */
+.main-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /
+}
+
+.welcome-text h2 {
+    color: #5a5c69;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.welcome-text p {
+    color: #858796;
+    margin-top: 5px;
+}
+
+/* Grid Kartu Statistik */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px; /* Batasi lebar maksimal biar nggak terlalu lebar di layar gede */
+}
+
+.card-modern {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e3e6f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 800;
+}
+
+.card-info p {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.card-footer {
+    padding: 12px 25px;
+    font-size: 11px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* Warna Aksen Kartu */
+.blue .card-info p { color: #4e73df; }
+.blue .card-footer { background: #4e73df; }
+
+.orange .card-info p { color: #f6c23e; }
+.orange .card-footer { background: #f6c23e; }
+
+.green .card-info p { color: #1cc88a; }
+.green .card-footer { background: #1cc88a; }
+
+.yellow .card-info p { color: #36b9cc; }
+.yellow .card-footer { background: #36b9cc; }
+
+/* Section Laporan */
+.report-section {
+    margin-top: 30px;
+}
+
+.report-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e3e6f0;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f8f9fc;
+    padding-bottom: 15px;
+}
+
+.status-badge {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Container Tabel */
+.table-container-modern {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    /* UBAH BAGIAN INI */
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; /* Lu bisa atur lebar tabelnya di sini */
+    max-width: 1200px;
+}
+
+/* Tabel Styling */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table th {
+    text-align: left;
+    padding: 15px;
+    background: #f8f9fc;
+    color: #4e73df;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e3e6f0;
+}
+
+.modern-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* Frame Gambar Produk */
+.product-img-frame {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+.product-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Biar gambar nggak gepeng */
+}
+
+/* Cell Nama Produk */
+.product-name-cell strong {
+    display: block;
+    color: #333;
+    font-size: 15px;
+}
+
+.product-name-cell span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Badge Stok */
+.stock-badge {
+    padding: 5px 12px;
+    background: #e1f7ed;
+    color: #1cc88a;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stock-badge.low {
+    background: #fff0ed;
+    color: #e74a3b;
+}
+
+/* Tombol Aksi */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    text-decoration: none;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.btn-edit { background: #f8f9fc; color: #4e73df; border: 1px solid #4e73df; }
+.btn-delete { background: #fff5f5; color: #e74a3b; border: 1px solid #e74a3b; }
+
+.btn-add-primary {
+    background: #4e73df;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* GANTI/TAMBAH BAGIAN INI */
+
+
+
+/* Banner Hijau Inventory */
+.inventory-banner {
+    background-color: #2e7d32;
+    padding: 35px;
+    margin: 25px; /* Hapus 'auto', pake 25px aja biar mepet kiri-kanan */
+    width: auto; /* Biar dia otomatis melebar ngikutin layar */
+    max-width: none; /* Hapus batasan lebarnya */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.banner-text p {
+    margin: 8px 0 0 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Tombol Tambah Produk Rapi */
+.btn-tambah-modern {
+    background-color: #ffffff;
+    color: #2e7d32;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tambah-modern:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+.btn-tambah-modern .icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Penyesuaian Tabel agar pas di bawah Banner */
+.table-section {
+    padding: 0 25px 25px 25px;
+}
+
+.table-container-modern {
+    background: white;
+    padding: 20px;
+    margin: 20px 25px; /* Sesuaikan margin biar sejajar sama banner */
+    width: auto; /* Biar full width */
+    max-width: none; /* Hapus batasan lebarnya */
+}
+
+/* Container Form Modern */
+.form-container-modern {
+    background-color: #ffffff;
+    margin: 25px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-container { /* Buat halaman tambah produk di image_946a39.png */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+/* Input Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.modern-form input, 
+.modern-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Upload & Preview Box */
+.image-preview-box {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px dashed #ddd;
+    cursor: pointer;
+}
+
+.image-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview-box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+/* Tombol Simpan */
+.btn-submit-primary {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit-primary:hover {
+    background-color: #1b5e20;
+}
+
+/* Update Warna Khusus Tombol Edit */
+.btn-submit-primary {
+    background-color: #1976d2; /* Biru untuk Edit biar beda sama Tambah */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-submit-primary:hover {
+    background-color: #1565c0;
+}
+
+/* Pastikan Textarea nempel rapi */
+.modern-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Warna khusus untuk tema Artikel */
+.article-theme {
+    background-color: #1b5e20; /* Hijau lebih tua */
+    box-shadow: 0 8px 20px rgba(27, 94, 32, 0.2);
+}
+
+/* Badge Tipe Artikel */
+.type-badge {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Konsistensi tabel dari halaman produk */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table th {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    border-bottom: 2px solid #eee;
+}
+
+.modern-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+/* Styling Dropdown Select */
+.modern-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Background tombol publikasi biar beda sama produk */
+.btn-submit-primary {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-submit-primary:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+/* Tema User */
+.user-theme {
+    background-color: #0277bd; /* Biru Profesional */
+    box-shadow: 0 8px 20px rgba(2, 119, 189, 0.2);
+}
+
+/* Search Bar Modern */
+.search-form-modern {
+    display: flex;
+    background: white;
+    padding: 5px;
+    border-radius: 30px;
+    width: 350px;
+    align-items: center;
+}
+
+.search-form-modern input {
+    border: none;
+    padding: 10px 20px;
+    flex: 1;
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-form-modern button {
+    background: none;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-reset {
+    text-decoration: none;
+    color: #999;
+    margin-right: 15px;
+}
+
+/* User Info Cell */
+.user-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #0277bd;
+    text-transform: uppercase;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-text span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Role Badges */
+.role-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.role-badge.admin {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.role-badge.customer {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Khusus form satu kolom */
+.single-col {
+    max-width: 600px;
+    margin-left: auto; /* Pastikan ini auto */
+    margin-right: auto; /* Pastikan ini auto */
+    display: block;
+}
+
+.modern-form .btn-submit-primary {
+    margin-top: 20px;
+    background-color: #0277bd; /* Samain sama tema User biru */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.nav-content { /* Sesuaikan dengan nama class navbar lu */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,205 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Wrapper Utama */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content-main {
+    flex-grow: 1;
+    padding: 30px;
+    width: 100%;
+}
+
+/* 1. Banner Section - Hijau Modern */
+.inventory-banner {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: white;
+    padding: 40px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.banner-text h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.banner-text p {
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* Tombol Tambah Produk */
+.btn-tambah-modern {
+    background-color: #ffffff;
+    color: #2e7d32;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-tambah-modern:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 2. Table Section */
+.table-container-modern {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    overflow-x: auto; /* Biar kalau layar kecil bisa di-scroll */
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.modern-table理论 thead th {
+    background-color: #f8f9fa;
+    padding: 15px;
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #eee;
+}
+
+.modern-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.modern-table td {
+    padding: 18px 15px;
+    vertical-align: middle;
+}
+
+/* Frame Gambar Produk */
+.product-img-frame {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+.product-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling Kolom Nama & ID */
+.product-name-cell strong {
+    display: block;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+.product-name-cell span {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Badge Stok */
+.stock-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: inline-block;
+}
+
+.stock-badge.low {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.btn-edit {
+    background-color: #fff;
+    border: 1px solid #3498db;
+    color: #3498db;
+}
+
+.btn-edit:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #fff;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inventory-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .content-main {
+        padding: 15px;
+    }
+}
