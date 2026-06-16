@@ -35,8 +35,7 @@ include '../includes/header.php'; // Header biar navbar tetep ada
 
                 <div class="product-action">
                     <!-- Tombol Detail -->
-                    <a href="detail_produk.php?id=<?= $row['id_product']; ?>" class="btn-detail">Detail</a>
-
+                    <a href="../detail_produk.php?id=<?= $row['id_product']; ?>" class="btn-detail-view">Detail</a>
                     <!-- Tombol Beli: Langsung proses ke keranjang tanpa login -->
                     <a href="tambah_keranjang.php?id=<?= $row['id_product']; ?>" class="btn-add-cart">
                         Beli

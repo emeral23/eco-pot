@@ -58,7 +58,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM posts ORDER BY id_post DESC");
                                 <div class="action-buttons">
                                     <a href="blog_edit.php?id=<?= $row['id_post']; ?>" class="btn-edit">✏️ Edit</a>
                                     <a href="blog_delete.php?id=<?= $row['id_post']; ?>" class="btn-delete"
-                                        onclick="return confirm('Yakin artikel ini mau dihapus, Ral?')">🗑️ Hapus</a>
+                                        onclick="return confirm('Yakin artikel ini mau dihapus?')">🗑️ Hapus</a>
                                 </div>
                             </td>
                         </tr>

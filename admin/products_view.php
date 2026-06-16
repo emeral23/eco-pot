@@ -75,7 +75,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM products ORDER BY id_product DESC
                                     <a href="products_edit.php?id=<?= $row['id_product']; ?>" class="btn-edit">✏️
                                         Edit</a>
                                     <a href="products_delete.php?id=<?= $row['id_product']; ?>" class="btn-delete"
-                                        onclick="return confirm('Yakin mau hapus data ini, Ral?')">🗑️ Hapus</a>
+                                        onclick="return confirm('Yakin mau hapus data ini?')">🗑️ Hapus</a>
                                 </div>
                             </td>
                         </tr>

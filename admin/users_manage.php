@@ -31,7 +31,7 @@ $query = mysqli_query($koneksi, $query_str);
         <section class="inventory-banner user-theme">
             <div class="banner-text">
                 <h1>Data Pengguna</h1>
-                <p>Kelola semua akun admin dan customer di sini, Ral.</p>
+                <p>Kelola semua akun admin dan customer di sini.</p>
             </div>
             <div class="banner-search">
                 <form action="" method="GET" class="search-form-modern">
@@ -82,7 +82,7 @@ $query = mysqli_query($koneksi, $query_str);
                                 <div class="action-buttons">
                                     <a href="users_edit.php?id=<?= $row['id_user']; ?>" class="btn-edit">✏️ Edit</a>
                                     <a href="users.delete.php" class="btn-delete"
-                                        onclick="return confirm('Hapus akun ini, Ral?')">🗑️ Hapus</a>
+                                        onclick="return confirm('Hapus akun ini?')">🗑️ Hapus</a>
                                 </div>
                             </td>
                         </tr>

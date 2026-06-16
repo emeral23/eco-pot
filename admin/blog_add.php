@@ -48,7 +48,7 @@ if (isset($_POST['simpan'])) {
                         </div>
                         <div class="input-group">
                             <label>Isi Konten</label>
-                            <textarea name="konten" rows="10" placeholder="Tulis cerita lu di sini, Ral..."
+                            <textarea name="konten" rows="10" placeholder="Tulis cerita lu di sini"
                                 required></textarea>
                         </div>
                     </div>

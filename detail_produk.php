@@ -20,7 +20,7 @@ if (!$p) {
 
 <?php if(isset($_GET['status']) && $_GET['status'] == 'success'): ?>
 <div class="alert-success">
-    Mantap Ral! Produk berhasil masuk keranjang.
+    Produk berhasil masuk keranjang.
 </div>
 <?php endif; ?>
 
@@ -61,7 +61,7 @@ if (!$p) {
                 </p>
 
                 <div class="action-buttons" style="margin-top: 30px;">
-                    <a href="proses_keranjang.php?id=<?php echo $p['id_product']; ?>" class="btn-buy-now">
+                    <a href="shop/checkout.php?php echo $p['id_product']; ?>" class="btn-buy-now">
                         Tambah ke Keranjang
                     </a>
                     <a href="index.php" class="btn-back-home">

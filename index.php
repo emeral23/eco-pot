@@ -3,69 +3,136 @@
 session_start();
 include 'config/database.php';
 include 'includes/header.php';
-
-// Ambil data produk dari database
-$query_produk = mysqli_query($koneksi, "SELECT * FROM products ORDER BY id_product DESC LIMIT 4");
 ?>
 
-<section class="products-section" id="produk-terbaru">
-    <div class="product-grid-modern">
-        <?php while($row = mysqli_fetch_assoc($query_produk)) : ?>
-        <div class="product-card">
-            <div class="product-img-box">
-                <img src="assets/img/<?= $row['gambar']; ?>" alt="<?= $row['nama_produk']; ?>">
-            </div>
-
-            <div class="product-info">
-                <h3><?= $row['nama_produk']; ?></h3>
-                <p>Rp <?= number_format($row['harga'], 0, ',', '.'); ?></p>
-
-                <div class="product-action">
-                    <a href="detail_produk.php?id=<?= $row['id_product']; ?>" class="btn-detail-view">Detail</a>
-
-                    <?php 
-                    // Cek apakah yang login adalah admin
-                    if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin') : 
-                    ?>
-                    <!-- Menu khusus admin buat kelola produk -->
-                    <a href="edit_produk.php?id=<?= $row['id_product']; ?>" class="btn-edit">Edit</a>
-                    <a href="hapus_produk.php?id=<?= $row['id_product']; ?>" class="btn-hapus"
-                        onclick="return confirm('Yakin mau hapus produk ini?')">Hapus</a>
-                    <?php else : ?>
-                    <!-- Menu buat user biasa atau tamu -->
-                    <a href="shop/tambah_keranjang.php?id=<?= $row['id_product']; ?>" class="btn-beli">Beli</a>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
-        <?php endwhile; ?>
+<!-- KONTEN UTAMA USER - HERO SECTION ESTETIK -->
+<section class="hero-aesthetic">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Menumbuhkan Kehidupan, <br>Menjaga Masa Depan</h1>
+        <p class="hero-subtitle">Setiap pot ramah lingkungan membawa satu langkah lebih dekat menuju bumi yang lebih
+            hijau dan selaras dengan alam.</p>
     </div>
 </section>
 
 <?php include 'includes/footer.php'; ?>
 
 <style>
-/* Style dipisah ke bawah sesuai request lu, Ral */
-.btn-edit {
-    background-color: #f39c12;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.btn-hapus {
-    background-color: #e74c3c;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.product-action {
+/* Base Layout Hero Section Estetik dengan Background Gambar */
+.hero-aesthetic {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
     display: flex;
-    gap: 10px;
+    align-items: center;
     justify-content: center;
-    margin-top: 15px;
+    background-image: url('assets/img/eco-pot.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Lapisan Overlay Halus Agar Teks Kontras & Mudah Dibaca */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Pembungkus Konten Teks */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Kalimat Judul Aesthetic (Typography Tebal & Hijau Eco-Pot) */
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1b5e20;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* Kalimat Sub-Judul Penjelas */
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
+/* Area Tombol Pilihan */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Tombol Utama (Solid Hijau) */
+.btn-hero-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* Tombol Kedua (Outline Transparan) */
+.btn-hero-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: transparent;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-secondary:hover {
+    background-color: #2e7d32;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Animasi Muncul Lembut Pas Halaman Dimuat */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>

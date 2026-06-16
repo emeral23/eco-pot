@@ -10,7 +10,7 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
 // 2. Cek apakah ID kosong
 if (empty($id)) {
     echo "<script>
-            alert('ID User tidak ditemukan, Ral!');
+            alert('ID User tidak ditemukan!');
             window.location.href='users_manage.php';
           </script>";
     exit();
@@ -19,7 +19,7 @@ if (empty($id)) {
 // 3. Proteksi: Jangan biarkan admin hapus dirinya sendiri
 if ($id == $_SESSION['id_user']) {
     echo "<script>
-            alert('Gak bisa hapus akun sendiri! Nanti lu gak bisa login lagi, Ral.');
+            alert('Tidak bisa hapus akun sendiri.');
             window.location.href='users_manage.php';
           </script>";
     exit();
