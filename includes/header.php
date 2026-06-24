@@ -26,7 +26,7 @@ $base_url = "http://localhost/project-eco/";
     <header>
         <nav>
             <div class="logo">
-                <a href="<?= $base_url; ?>index.php">ECO-POT
+                <a href="<?= $base_url; ?>index.php" style="color: #ffffff; text-decoration: none;">ECO-POT
                     <?= isset($_SESSION['role']) && $_SESSION['role'] == 'admin' ? '<span class="badge-admin">ADMIN</span>' : ''; ?>
                 </a>
             </div>
@@ -48,12 +48,9 @@ $base_url = "http://localhost/project-eco/";
 
             <div class="user-menu">
                 <?php if (isset($_SESSION['user_id'])) : ?>
-                <!-- Tampilan kalau sudah login (Ada Nama & Logout) -->
                 <span class="user-name">Halo, <?= $_SESSION['username']; ?></span>
-                <a href="<?= $base_url; ?>profile.php" class="btn-profile">Profile</a>
                 <a href="<?= $base_url; ?>auth/logout.php" class="btn-logout">Logout</a>
                 <?php else : ?>
-                <!-- Tampilan kalau belum login -->
                 <a href="<?= $base_url; ?>auth/login.php" class="btn-login">Login</a>
                 <?php endif; ?>
             </div>

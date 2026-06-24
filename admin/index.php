@@ -29,9 +29,6 @@ $total_orders = mysqli_num_rows($query_orders);
 <div class="dashboard-wrapper with-sidebar">
     <aside class="admin-sidebar">
         <div class="profile-section">
-            <div class="avatar">
-                <img src="../assets/img/admin-avatar.png" alt="Admin Profile">
-            </div>
             <h4><?= $_SESSION['nama_lengkap'] ?? $_SESSION['username']; ?></h4>
             <p>Administrator</p>
         </div>
