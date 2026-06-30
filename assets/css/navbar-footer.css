@@ -1,39 +1,171 @@
-header {
-    background-color: #2e7d32;
-    padding: 20px 5%;
+/* ==========================================================================
+   RESET & GLOBAL STYLE NAVBAR (Mandiri tanpa main.css)
+   ========================================================================== */
+header, nav, .navbar-container, .logo, .nav-links, .user-menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav {
+/* --- Wrapper Header Utama --- */
+.main-header {
+    background-color: #3cb115; /* Abu gelap slate premium */
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 6px -1px rgba(48, 213, 15, 0.1), 0 2px 4px -1px rgba(183, 238, 5, 0.06);
+    width: 100%;
+}
+
+/* --- Container Navbar (Flexbox Layout) --- */
+nav.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    height: 75px; /* Tinggi navbar ideal */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: transparent; /* Paksa transparan mengikuti main-header */
 }
 
+/* ==========================================================================
+   BRAND LOGO STYLING
+   ========================================================================== */
+.logo a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Aksen warna orange bara briket untuk kata 'Kuy' */
+.logo a span {
+    color: #f97316 !important;
+}
+
+/* Badge penanda khusus untuk Akun Admin */
+.logo .badge-admin {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+/* ==========================================================================
+   NAVIGATION LINKS (MENU TENGAH)
+   ========================================================================== */
 .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
+    gap: 35px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    position: relative;
 }
 
-.nav-links a {
-    color: white;
+.nav-links li a.nav-item {
+    color: #ffffff !important; /* Warna teks putih agak abu, nyaman di mata */
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: color 0.2s ease-in-out;
 }
 
-.nav-content { /* Sesuaikan dengan nama class navbar lu */
-    max-width: 1200px;
-    margin: 0 auto;
+/* Efek hover link menu berubah menjadi warna orange bara */
+.nav-links li a.nav-item:hover {
+    color: #f97316 !important;
+}
+
+/* Efek Garis Bawah Orange Pas Hover */
+.nav-links li a.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #f97316 !important;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a.nav-item:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   USER MENU & BUTTONS (KANAN)
+   ========================================================================== */
+.user-menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-footer {
-    background-color: #1b5e20;
-    color: white;
-    padding: 30px 5%;
-    text-align: center;
+.user-name {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.user-name strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Tombol Dasar Login / Logout */
+.btn-auth {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+/* Tombol Login Admin (Warna Orange Bara) */
+.btn-login {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2);
+}
+
+.btn-login:hover {
+    background-color: #ea580c !important;
+    transform: translateY(-1px);
+}
+
+/* Tombol Logout (Muted Panel Style) */
+.btn-logout {
+    background-color: #fff1f0 !important;
+    color: #f5222d !important;
+    border: 1px solid #ffa39e !important;
+}
+
+.btn-logout:hover {
+    background-color: #f5222d !important;
+    color: #ffffff !important;
+    border-color: #f5222d !important;
 }

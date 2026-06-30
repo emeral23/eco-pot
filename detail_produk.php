@@ -61,9 +61,6 @@ if (!$p) {
                 </p>
 
                 <div class="action-buttons" style="margin-top: 30px;">
-                    <a href="shop/checkout.php?php echo $p['id_product']; ?>" class="btn-buy-now">
-                        Tambah ke Keranjang
-                    </a>
                     <a href="index.php" class="btn-back-home">
                         Kembali ke Home
                     </a>

@@ -10,7 +10,7 @@ include '../includes/header.php'; // Header biar navbar tetep ada
 
 <div class="shop-page">
     <div class="shop-header">
-        <h1>Katalog Produk Eco-Pot</h1>
+        <h1>Katalog Barang Briket</h1>
     </div>
 
     <div class="products-container">
@@ -37,9 +37,6 @@ include '../includes/header.php'; // Header biar navbar tetep ada
                     <!-- Tombol Detail -->
                     <a href="../detail_produk.php?id=<?= $row['id_product']; ?>" class="btn-detail-view">Detail</a>
                     <!-- Tombol Beli: Langsung proses ke keranjang tanpa login -->
-                    <a href="tambah_keranjang.php?id=<?= $row['id_product']; ?>" class="btn-add-cart">
-                        Beli
-                    </a>
                 </div>
             </div>
         </div>

@@ -34,13 +34,13 @@ if(isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Akun Eco-Pot</title>
+    <title>Daftar Akun BriketKuy</title>
     <link rel="stylesheet" href="style-auth.css">
 </head>
 
 <body>
     <div class="auth-container">
-        <h1>Daftar Akun Eco-Pot</h1>
+        <h1>Daftar Akun BriketKut</h1>
         <form action="" method="POST">
             <div class="form-group">
                 <label>Username</label>

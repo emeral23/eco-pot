@@ -46,16 +46,16 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Eco-Pot</title>
+    <title>Login Admin - BriketKuy</title>
     <link rel="stylesheet" href="style-auth.css">
 </head>
 
 <body>
     <div class="auth-container">
-        <h1>Masuk Ke Eco-Pot</h1>
+        <h1>Masuk Ke BriketKuy</h1>
 
         <?php if (isset($_GET['pesan']) && $_GET['pesan'] == 'gagal') : ?>
-        <p style="color: red; text-align: center; margin-bottom: 15px;">Username atau Password salah, Ral!</p>
+        <p style="color: red; text-align: center; margin-bottom: 15px;">Username atau Password salah, Bos</p>
         <?php endif; ?>
 
         <form method="POST">
@@ -70,7 +70,6 @@ if (isset($_POST['login'])) {
             </div>
 
             <button type="submit" name="login" class="btn-auth">Masuk Sekarang</button>
-            <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
         </form>
     </div>
 </body>

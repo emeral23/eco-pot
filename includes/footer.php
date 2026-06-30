@@ -2,11 +2,11 @@
 <footer>
     <div class="footer-container">
         <div class="footer-info">
-            <h3>Eco-Pot</h3>
-            <p>Solusi berkebun tanpa plastik untuk masa depan.</p>
+            <h3>BriketKut</h3>
+            <p>Solusi braket ramah lingkungan.</p>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?= date('Y'); ?> Eco-Pot Project - Eral.</p>
+            <p>&copy; <?= date('Y'); ?> BriketKut Project - Eral.</p>
         </div>
     </div>
 </footer>

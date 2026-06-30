@@ -1,7 +1,7 @@
 /* --- Root Setup --- */
 :root {
-    --primary-green: #2d5a27;
-    --accent-green: #4caf50;
+    --primary-green: #be4f26;
+    --accent-green: #d4870b;
     --text-main: #333333;
     --text-muted: #777777;
     --bg-light: #f9f9f9;
@@ -151,8 +151,10 @@
 /* --- Reset & Base Navbar --- */
 /* --- Ultra Modern Glassmorphism Navbar --- */
 /* --- Clean & Minimalist Navbar --- */
+
+/* --- Clean & Minimalist Navbar (Tema BriketKuy) --- */
 nav {
-    background-color: #2D7A35;
+    background-color: rgb(62, 203, 7) ; /* Mengubah ijo menjadi abu gelap slate premium */
     padding: 0 10%;
     height: 70px;
     display: flex;
@@ -161,7 +163,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Brand Logo --- */
@@ -175,7 +177,7 @@ nav {
 }
 
 .nav-brand a:hover {
-    color: #4caf50;
+    color: #d8ce0d;
 }
 
 /* --- Navigation Links --- */
@@ -197,7 +199,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #2d5a27;
+    color: #aed017;
 }
 
 /* Efek Garis Bawah Hijau Pas Hover */
@@ -208,7 +210,7 @@ nav {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #2d5a27;
+    background-color: #38ac29;
     transition: 0.3s;
 }
 
